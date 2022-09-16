@@ -15,5 +15,16 @@ public class UnitTest1
         
         Assert.Equal(EmployeeInfo.type(person), "พนักงานประจำร้าน");
     }
+    [Fact]
+    public void FounderTest()
+    {
+        int person = 1;
+        string name = Founder.name(person);
+        string surname = Founder.surname(person);
+        string idNumber = Founder.IdNumber(person);
+        Founder Info = new Founder(name,surname,idNumber);
+        
+        Assert.Equal(Founder.name(person), "นายทวี");
+    }
     
 }
